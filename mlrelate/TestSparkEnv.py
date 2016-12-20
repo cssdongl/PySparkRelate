@@ -1,6 +1,6 @@
 from pyspark import SparkContext
-sc = SparkContext("local[2]", "First Spark App")
-data = sc.textFile("file:///home/dongl/sparkJars/pySparkScripts/testFiles/userPhcaseHistory.txt").map(lambda line:line.split(",")).map(lambda record: (record[0], record[1], record[2]))
+sc = SparkContext("local[3]", "First Spark App")
+data = sc.textFile("file:///home/hadoop/testFiles/pythonTest/userPhcaseHistory.txt").map(lambda line:line.split(",")).map(lambda record: (record[0], record[1], record[2]))
 numPurchases = data.count()
 uniqueUsers = data.map(lambda record: record[0]).distinct().count()
 totalRevenue = data.map(lambda record: float(record[2])).sum()
