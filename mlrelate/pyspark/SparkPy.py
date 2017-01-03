@@ -1,4 +1,4 @@
-from pyspark import SparkContext
+from mlrelate.pyspark import SparkContext
 
 logFile = "/home/tom/spark-1.6.0/README.md"
 sc = SparkContext("local","Simple App")

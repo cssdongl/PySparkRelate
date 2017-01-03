@@ -1,4 +1,4 @@
-from pyspark import SparkContext
+from mlrelate.pyspark import SparkContext
 sc = SparkContext("local[3]", "First Spark App")
 data = sc.textFile("file:///home/hadoop/testFiles/pythonTest/userPhcaseHistory.txt").map(lambda line:line.split(",")).map(lambda record: (record[0], record[1], record[2]))
 numPurchases = data.count()
