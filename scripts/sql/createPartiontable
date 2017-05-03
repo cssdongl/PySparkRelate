@@ -1,0 +1,57 @@
+create external table if not exists origianl_usb_device
+(
+jsonContent string
+) 
+PARTITIONED BY (year string, month string, day string,hour string)
+row format delimited 
+fields terminated by '\t'  
+lines terminated by '\n' 
+stored as textfile
+location  '/gobblintest/job-output1/USB_DEVICE2'; 
+
+
+create external table if not exists origianl_usb_device
+(
+jsonContent string
+) 
+PARTITIONED BY (year string, month string, day string,hour string)
+row format delimited 
+fields terminated by '\t'  
+lines terminated by '\n' 
+stored as textfile
+location  '/gobblintest/job-output1/USB_DEVICE2';
+
+
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='00') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/00';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='01') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/01';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='02') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/02';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='03') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/03';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='04') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/04';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='05') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/05';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='06') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/06';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='07') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/07';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='08') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/08';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='09') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/09';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='10') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/10';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='11') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/11';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='12') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/12';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='13') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/13';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='14') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/14';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='15') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/15';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='16') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/16';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='17') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/17';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='18') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/18';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='19') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/19';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='20') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/20';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='21') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/21';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='22') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/22';
+ALTER TABLE origianl_usb_device ADD PARTITION(year='2016', month='11', day='15',hour='23') LOCATION '/gobblintest/job-output1/USB_DEVICE2/2016/11/15/23';
+
+
+
+<dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
