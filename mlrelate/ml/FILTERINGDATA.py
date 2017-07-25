@@ -33,6 +33,20 @@ def recommand(username,users):
             recommendations.append((artist,neighborRatings[artist]))
     return sorted(recommendations,key = lambda artistTuple : artistTuple[1],reverse = True)
 
+def minkowski(rating1,rating2,r):
+    distance  = 0
+    commonrating = False
+    for key in rating1:
+        if key in rating2:
+            distance += pow(abs(rating1[key] - rating2[key]), 2)
+            commonrating = True
+    if commonrating:
+        return pow(distance, 1/r)
+    else:
+        return 0
+
+
+
 
 print manhattan(users['Hailey'],users['Veronica'])
 print computeNearestNeighbor('Hailey',users)
